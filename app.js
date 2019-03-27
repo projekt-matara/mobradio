@@ -34,7 +34,7 @@ app.get('/', (req, reply) => {
   reply.sendFile('index.html')
 })
 
-app.listen(80, (err, address) => {
+app.listen(3000, (err, address) => {
   if (err) {
     app.log.error(err)
     process.exit(1)
