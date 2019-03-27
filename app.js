@@ -6,8 +6,6 @@ const app = require('fastify')({
   logger: true
 })
 const static = require('fastify-static')
-const io = require('socket.io')()
-const ss = require('socket.io-stream')
 const path = require('path')
 
 app.register(static, {
@@ -36,7 +34,7 @@ app.get('/', (req, reply) => {
   reply.sendFile('index.html')
 })
 
-app.listen(3000, (err, address) => {
+app.listen(80, (err, address) => {
   if (err) {
     app.log.error(err)
     process.exit(1)
